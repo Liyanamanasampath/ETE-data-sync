@@ -7,6 +7,7 @@ import { ExpressAdapter } from "@bull-board/express";
 import { createBullBoard } from "@bull-board/api";
 import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
 import { orderQueue } from './queue/queue.provider.js';
+import { QueueModule } from './queue/queue.module.js';
 
 export class AppModule {
     app = express();
@@ -31,6 +32,7 @@ export class AppModule {
 
         await RedisConfig.redisConnect();
         new SyncModule(this.router);
+        new QueueModule();
 
         const PORT = process.env.PORT || 4000;
         this.server.listen(PORT, () =>

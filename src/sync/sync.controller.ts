@@ -1,5 +1,5 @@
 import { type Request, type Response, type NextFunction } from "express";
-import { handleSyncData } from "./sync.service.js";
+import { handleSyncData } from "./sync.service";
 
 export async function syncData(req: Request, res: Response, next: NextFunction) {
     try {

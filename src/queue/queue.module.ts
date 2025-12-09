@@ -1,4 +1,4 @@
-import { processor } from "./queue.processor.js";
+import { processor } from "./queue.processor";
 
 export class QueueModule {
     constructor(){

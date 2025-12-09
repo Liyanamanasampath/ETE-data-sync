@@ -1,6 +1,6 @@
 import { Job, Worker } from "bullmq"
-import { bullmqConfig } from "../config/bullmq.config.js"
-import { processOrderJob } from "../worker/worker.module.js"
+import { bullmqConfig } from "../config/bullmq.config"
+import { processOrderJob } from "../worker/worker.module"
 
 export class processor {
    public static process:any | null = null

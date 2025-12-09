@@ -1,5 +1,5 @@
 import type { Request } from "express";
-import { orderQueue } from "../queue/queue.provider.js";
+import { orderQueue } from "../queue/queue.provider";
 
 export async function handleSyncData(req: Request) {
     const payload = req.body;

@@ -1,13 +1,13 @@
 import cors from 'cors';
 import express, { Router } from 'express';
 import http from 'http';
-import { RedisConfig } from './config/redis.config.js';
-import { SyncModule } from './sync/sync.module.js';
+import { RedisConfig } from './config/redis.config';
+import { SyncModule } from './sync/sync.module';
 import { ExpressAdapter } from "@bull-board/express";
 import { createBullBoard } from "@bull-board/api";
 import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
-import { orderQueue } from './queue/queue.provider.js';
-import { QueueModule } from './queue/queue.module.js';
+import { orderQueue } from './queue/queue.provider';
+import { QueueModule } from './queue/queue.module';
 
 export class AppModule {
     app = express();

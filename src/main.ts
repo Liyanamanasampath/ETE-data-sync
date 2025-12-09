@@ -1,4 +1,5 @@
-import { AppModule } from "./app.module.js";
+import { AppModule } from "./app.module";
+
 
 async function boot() {
     const app = new AppModule();
